@@ -8,9 +8,10 @@ services:
 env:
   - NODE_ENV=ci PORT=3000
 cache:
+  bundler: true
   directories:
-    - ./node_modules
-    - ./client/node_modules
+    - node_modules # NPM packages
+    - client/node_modules
 install:
   - npm install
   - npm run build
