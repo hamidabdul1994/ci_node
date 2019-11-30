@@ -2,12 +2,14 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
+  "homepage": "http://hamidabdul1994.github.io/ci_node",
   "main": "index.js",
   "jest": {
     "setupTestFrameworkScriptFile": "./tests/setup.js"
   },
   "scripts": {
     "start": "node index.js",
+    "postinstall": "cd client && npm i",
     "server": "nodemon index.js --ignore tests",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
